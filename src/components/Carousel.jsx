@@ -31,6 +31,21 @@ const Carousel = React.forwardRef((props, ref) => {
 					"https://img.freepik.com/free-photo/young-adult-enjoying-virtual-date_23-2149328221.jpg?size=626&ext=jpg&ga=GA1.1.546243260.1706593150&semt=ais",
 			},
 			{
+				name:"Nikhil Kottoli",
+				role:"Web Developer",
+				image:"Nikhil.jpg"
+			},
+			{
+				name:"Prateek",
+				role:"Web Developer",
+				image:"Prateek.jpeg"
+			},
+			{
+				name: "Rishav",
+				role:"UI/UX Design",
+				image:"Rishav.jpeg"
+			},
+			{
 				name:"Sagar",
 				role: "Marketing Head",
 				image:"SagarMedia.jpeg"
@@ -40,6 +55,32 @@ const Carousel = React.forwardRef((props, ref) => {
 				role:"App Developer",
 				image:"Manish.jpeg"
 			},
+			{
+				name:"Sagar",
+				role: "Marketing Head",
+				image:"SagarMedia.jpeg"
+			},
+			{
+				name:"Bhavan Kumar",
+				role:"Marketing exeutive",
+				image:"BKS.jpeg"
+			},
+			{
+				name:"Debajyoti",
+				role:"Backend Developer",
+				image:"Debajyoti.jpeg"
+			},
+			{
+				name:"Anurag",
+				role:"Ai Head",
+				image:"Anurag.jpeg"
+			},
+			{
+				name:"Shaskank",
+				role:"ML Developer",
+				image:"Shashank.jpeg",
+			},
+
 		],
 		Founders: [
 			{
@@ -60,12 +101,18 @@ const Carousel = React.forwardRef((props, ref) => {
 				image:
 					"https://img.freepik.com/free-photo/close-up-portrait-smiling-young-bearded-man_171337-4819.jpg?w=1060&t=st=1713959851~exp=1713960451~hmac=34940b0d57af03134523c3886b183e38c73ce7678f31fe88965bd80f1d10ff46",
 			},
+			
 		],
 		webTeam: [
 			{
 				name:"Nikhil Kottoli",
 				role:"Web Developer",
 				image:"Nikhil.jpg"
+			},
+			{
+				name:"Prateek",
+				role:"Web Developer",
+				image:"Prateek.jpeg"
 			}
 		],
 		designTeam: [
@@ -80,6 +127,11 @@ const Carousel = React.forwardRef((props, ref) => {
 				name:"Sagar",
 				role: "Marketing Head",
 				image:"SagarMedia.jpeg"
+			},
+			{
+				name:"Bhavan Kumar",
+				role:"Marketing exeutive",
+				image:"BKS.jpeg"
 			}
 		],
 		AppTeam:[
@@ -96,7 +148,18 @@ const Carousel = React.forwardRef((props, ref) => {
 				image:"Debajyoti.jpeg"
 			}
 		],
-		AiTeam:[]
+		AiTeam:[
+			{
+				name:"Anurag",
+				role:"Ai Head",
+				image:"Anurag.jpeg"
+			},
+			{
+				name:"Shaskank",
+				role:"ML Developer",
+				image:"Shashank.jpeg",
+			}
+		]
 	};
 
 	const carouselRef = useRef(null);
@@ -140,77 +203,83 @@ const Carousel = React.forwardRef((props, ref) => {
 				</h1>
 			</div>
 			<div className="h-[10%] w-full bg-black flex justify-center items-center">
-				<div className="w-full  bg-black flex justify-center items-center text-lg text-white flex-wrap gap-6">
-					<div
-						className={`cursor-pointer  transition duration-300 ease-in-out text-[#999999] ${getTabClassName(
-							"All"
-						)}`}
-						onClick={() => setSelectedTab("All")}
-					>
-						<span>All</span>
-					</div>
+				<div className="w-full bg-black flex justify-center items-center text-lg text-white flex-wrap md:flex-row flex-col gap-5 mt-10 md:mt-0">
+					<div className="flex gap-5">
+						<div
+							className={`cursor-pointer  transition duration-300 ease-in-out text-[#999999] ${getTabClassName(
+								"All"
+							)}`}
+							onClick={() => setSelectedTab("All")}
+						>
+							<span>All</span>
+						</div>
 
-					<div
-						className={`cursor-pointer  transition duration-300 ease-in-out text-[#999999] ${getTabClassName(
-							"Founders"
-						)}`}
-						onClick={() => setSelectedTab("Founders")}
-					>
-						<span>Founders</span>
-					</div>
+						<div
+							className={`cursor-pointer  transition duration-300 ease-in-out text-[#999999] ${getTabClassName(
+								"Founders"
+							)}`}
+							onClick={() => setSelectedTab("Founders")}
+						>
+							<span>Founders</span>
+						</div>
 
-					<div
-						className={`cursor-pointer  transition duration-300 ease-in-out text-[#999999] ${getTabClassName(
-							"webTeam"
-						)}`}
-						onClick={() => setSelectedTab("webTeam")}
-					>
-						<span>Web-Team</span>
+						<div
+							className={`cursor-pointer  transition duration-300 ease-in-out text-[#999999] ${getTabClassName(
+								"webTeam"
+							)}`}
+							onClick={() => setSelectedTab("webTeam")}
+						>
+							<span>Web-Team</span>
+						</div>
 					</div>
-
-					<div
-						className={`cursor-pointer  transition duration-300 ease-in-out text-[#999999] ${getTabClassName(
-							"designTeam"
-						)}`}
-						onClick={() => setSelectedTab("designTeam")}
-					>
-						<span>Design-Team</span>
+					
+					<div className="flex gap-5 md:text-xl text-sm">
+						<div
+							className={`cursor-pointer  transition duration-300 ease-in-out text-[#999999] ${getTabClassName(
+								"designTeam"
+							)}`}
+							onClick={() => setSelectedTab("designTeam")}
+						>
+							<span>Design-Team</span>
+						</div>
+						<div
+							className={`cursor-pointer  transition duration-300 ease-in-out text-[#999999] ${getTabClassName(
+								"marketingTeam"
+							)}`}
+							onClick={() => setSelectedTab("marketingTeam")}
+						>
+							<span>Marketing-Team</span>
+						</div>
+						<div
+							className={`cursor-pointer  transition duration-300 ease-in-out text-[#999999] ${getTabClassName(
+								"AppTeam"
+							)}`}
+							onClick={() => setSelectedTab("AppTeam")}
+						>
+							<span>App-Team</span>
+						</div>
 					</div>
-					<div
-						className={`cursor-pointer  transition duration-300 ease-in-out text-[#999999] ${getTabClassName(
-							"marketingTeam"
-						)}`}
-						onClick={() => setSelectedTab("marketingTeam")}
-					>
-						<span>Marketing-Team</span>
-					</div>
-					<div
-						className={`cursor-pointer  transition duration-300 ease-in-out text-[#999999] ${getTabClassName(
-							"AppTeam"
-						)}`}
-						onClick={() => setSelectedTab("AppTeam")}
-					>
-						<span>App-Team</span>
-					</div>
-					<div
-						className={`cursor-pointer  transition duration-300 ease-in-out text-[#999999] ${getTabClassName(
-							"BackendTeam"
-						)}`}
-						onClick={() => setSelectedTab("BackendTeam")}
-					>
-						<span>Backend-Team</span>
-					</div>
-					<div
-						className={`cursor-pointer  transition duration-300 ease-in-out text-[#999999] ${getTabClassName(
-							"AiTeam"
-						)}`}
-						onClick={() => setSelectedTab("AiTeam")}
-					>
-						<span>Ai/ML-Team</span>
-					</div>
+					<div className="flex gap-5 text-sm md:text-xl">
+						<div
+							className={`cursor-pointer  transition duration-300 ease-in-out text-[#999999] ${getTabClassName(
+								"BackendTeam"
+							)}`}
+							onClick={() => setSelectedTab("BackendTeam")}
+						>
+							<span>Backend-Team</span>
+						</div>
+						<div
+							className={`cursor-pointer  transition duration-300 ease-in-out text-[#999999] ${getTabClassName(
+								"AiTeam"
+							)}`}
+							onClick={() => setSelectedTab("AiTeam")}
+						>
+							<span>Ai-ML</span>
+						</div>
+						</div>
 				</div>
 			</div>
-			<div className="h-[75%] w-full bg-black flex justify-center items-center gap-10 p-10 relative md:flex-row flex-col">
+			<div className="h-[75%] w-full bg-black flex justify-center items-center gap-10 p-10 relative md:flex-row flex-col mt-10 md:mt-10">
 				<button
 					className="carousel-btn right border-2 rounded-full p-3 border-[#A79FFF] hidden md:block"
 					onClick={() => {

@@ -44,10 +44,10 @@ function FAQ() {
 
   return (
     <div className="bg-black">
-      <div className="flex flex-col justify-center items-center  h-max lg:gap-30 sm:gap-10 py-14 ">
-        <div className=" bg-gradient-to-br  from-purple-700 via-black to-purple-500 p-0.5 rounded-3xl  ">
+      <div className="flex flex-col justify-center items-center  h-max lg:gap-30 sm:gap-10 py-0">
+        <div className=" bg-gradient-to-br  from-purple-700 via-black to-purple-500 p-0.5 rounded-3xl ">
           <div className="block w-auto px-16 py-5  rounded-3xl shadow hover:bg-gray-100 bg-gradient-to-br  from-black via-gray-950 to-indigo-950 ">
-            <span className=" text-center text-white lg:text-3xl sm:text-2xl">
+            <span className=" text-center text-white lg:text-3xl sm:text-2xl font-bold">
               Frequently Asked Questions
             </span>
           </div>
