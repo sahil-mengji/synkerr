@@ -161,7 +161,6 @@ const Carousel = React.forwardRef((props, ref) => {
 			}
 		]
 	};
-
 	const carouselRef = useRef(null);
 
 	const scrollCarousel = (direction) => {
