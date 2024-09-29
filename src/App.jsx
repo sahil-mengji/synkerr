@@ -1,26 +1,16 @@
-import React, { useRef } from "react";
-import HeroSectiontwo from "./components/HeroSection";
-import Globe from "./components/Globe";
-import Carousel from "./components/Carousel";
-import SocialMedia from "./components/SocialMedia";
-import Footer from "./components/Footer";
-import Objectives from "./components/Objectives";
-import FAQ from "./components/FAQ";
-const App = () => {
-	const bottomRef = useRef(null);
-	const TeamRef = useRef(null);
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 
+import Card from "./components/Main";
+import Detail from "./components/Detail";
+
+export default function App() {
 	return (
-		<div className="App min-w-full min-h-screen overflow-x-hidden">
-			<HeroSectiontwo TeamRef={TeamRef}/>
-			<Globe />
-			<SocialMedia/>
-			<Objectives/>
-			<FAQ/>
-			<Carousel ref={TeamRef} />
-			<Footer/>
+		<div className="w-full  bg-black  h-[100vh] flex justify-center items-center flex-col">
+			<Routes>
+				<Route path="/" element={<Card />} />
+				<Route path="/detail/:id" element={<Detail />} />
+			</Routes>
 		</div>
 	);
-};
-
-export default App;
+}
